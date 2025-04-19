@@ -4,7 +4,7 @@ import { AlertCircle, Save, User } from 'lucide-react';
 
 const Profile = () => {
   const { user, logout } = useAuth();
-  const [displayName, setDisplayName] = useState(user?.displayName || '');
+  const [displayName, setDisplayName] = useState(user?.email || '');
   const [isEditing, setIsEditing] = useState(false);
   const [saveSuccess, setSaveSuccess] = useState(false);
   const [saveError, setSaveError] = useState('');
