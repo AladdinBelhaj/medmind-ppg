@@ -8,3 +8,11 @@ services:
         volumes:
             - .:/app
             - /app/node_modules
+    
+
+    django:
+        build:
+            context: backend
+            dockerfile: Dockerfile
+        ports:
+            - "8000:8000"
